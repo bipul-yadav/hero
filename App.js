@@ -31,7 +31,7 @@ class App extends Component{
     super()
     this.state={
       logs:[],
-      name:"Testing"
+      name:"Testing1"
     }
 
     this.codepushSync()
