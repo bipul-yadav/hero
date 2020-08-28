@@ -26,9 +26,16 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import CodePush from 'react-native-code-push'
 class App extends Component{
-  state={
-    logs:[]
+
+  constructor(){
+    super()
+    this.state={
+      logs:[]
+    }
+
+    this.codepushSync()
   }
+  
 
   codepushSync(){
     console.log("pressed")
