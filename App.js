@@ -30,7 +30,8 @@ class App extends Component{
   constructor(){
     super()
     this.state={
-      logs:[]
+      logs:[],
+      name:"bipul"
     }
 
     this.codepushSync()
@@ -57,7 +58,7 @@ class App extends Component{
       <Text>Hello hero</Text>
       <Text>Hello bipul</Text>
       <Text>Hello World</Text>
-      <Text>Hello World</Text>
+      <Text>{this.state.name}</Text>
     <Text>{this.state.logs}</Text>
       <Button title="codepush" onPress={()=>this.codepushSync()}/>
     </View>
