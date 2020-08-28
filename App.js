@@ -47,7 +47,7 @@ class App extends Component{
     return(
     <View>
       <Text>CodePush</Text>
-      <Text>Hello World</Text>
+      <Text>Hello hero</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
