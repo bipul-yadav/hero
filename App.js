@@ -31,7 +31,7 @@ class App extends Component{
     super()
     this.state={
       logs:[],
-      name:"bipul"
+      name:"Testing"
     }
 
     this.codepushSync()
@@ -41,7 +41,7 @@ class App extends Component{
   codepushSync(){
     console.log("pressed")
     CodePush.sync({
-      updateDialog:true,
+      updateDialog:false,
       installMode:CodePush.InstallMode.IMMEDIATE
     },(status)=>{
       for(var key in CodePush.SyncStatus){
