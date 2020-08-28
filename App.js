@@ -36,6 +36,7 @@ class App extends Component{
   render(){
     return(
     <View>
+      <Text>CodePush</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
