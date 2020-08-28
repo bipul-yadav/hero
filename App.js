@@ -48,7 +48,7 @@ class App extends Component{
     <View>
       <Text>CodePush</Text>
       <Text>Hello hero</Text>
-      <Text>Hello World</Text>
+      <Text>Hello bipul</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
     <Text>{this.state.logs}</Text>
