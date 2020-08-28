@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
 
 import {
@@ -23,14 +24,22 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
+import CodePush from 'react-native-code-push'
 class App extends Component{
+
+  codepushSync=()=>{
+    CodePush.sync({
+      updateDialog:true,
+      installMode:CodePush.InstallMode.IMMEDIATE
+    })
+  }
   render(){
     return(
     <View>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
+      <Button title="codepush" onPress={()=>this.codepushSync}/>
     </View>
       )
   }
