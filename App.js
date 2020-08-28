@@ -26,11 +26,21 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import CodePush from 'react-native-code-push'
 class App extends Component{
+  state={
+    logs:[]
+  }
 
-  codepushSync=()=>{
+  codepushSync(){
+    console.log("pressed")
     CodePush.sync({
       updateDialog:true,
       installMode:CodePush.InstallMode.IMMEDIATE
+    },(status)=>{
+      for(var key in CodePush.SyncStatus){
+        if(status==CodePush.SyncStatus[key]){
+          this.setState({logs:key})
+        }
+      }
     })
   }
   render(){
@@ -40,7 +50,9 @@ class App extends Component{
       <Text>Hello World</Text>
       <Text>Hello World</Text>
       <Text>Hello World</Text>
-      <Button title="codepush" onPress={()=>this.codepushSync}/>
+      <Text>Hello World</Text>
+    <Text>{this.state.logs}</Text>
+      <Button title="codepush" onPress={()=>this.codepushSync()}/>
     </View>
       )
   }
